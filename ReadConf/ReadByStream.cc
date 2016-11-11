@@ -16,7 +16,7 @@
 #include <sstream>
 using namespace std;
 
-const char democonf[] = "demo.conf";
+const char democonf[] = "ReadByStream.conf";
 const string line_head("remote=");
 
 int
