@@ -16,25 +16,29 @@
 #include <sstream>
 using namespace std;
 
-const char sql_fac_conf[] = "/storage/syslog-ng/sql_facility.conf";
-const string flag_remote_set("remote=");
+const char democonf[] = "demo.conf";
+const string line_head("remote=");
 
 int
-parse_fac_line(string line)
+parse_line(string line)
 {
 	char *p_fac;
 
-//	if ( line.substr(0, 1) == "#");
-//		return 0;
-
-	if ( line.substr(0, flag_remote_set.size()) == flag_remote_set )
+	const char *p =  line.c_str();
+	if ( *p == '#' )
 	{
-		string remote_fac_set = line.substr(flag_remote_set.size(), line.size());
+		printf ( "find #\n" );
+		return 0;
+	}
 
-		stringstream ss_remote_fac_set(remote_fac_set);
+	if ( line.substr(0, line_head.size()) == line_head )
+	{
+		string line_body = line.substr(line_head.size(), line.size());
+
+		stringstream ss_set(line_body);
 		string sub_fac;
 
-		while ( getline(ss_remote_fac_set, sub_fac, ',') )
+		while ( getline(ss_set, sub_fac, ',') )
 		{
 			p_fac = strdup(sub_fac.c_str());
 			printf ( "fac:%s\n", p_fac );
@@ -50,14 +54,14 @@ LoadConfByEqual()
 {
 	
 	ifstream in;
-	in.open(sql_fac_conf);
+	in.open(democonf);
 	if ( in )
 	{
 		string line;
 
 		while ( getline(in, line) )
 		{
-			parse_fac_line(line);	
+			parse_line(line);	
 		}
 	}
 	else
@@ -65,7 +69,6 @@ LoadConfByEqual()
 		return -1;
 	}
 }
-
 
 int
 main ( int argc, char *argv[] )
