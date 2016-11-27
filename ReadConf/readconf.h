@@ -10,35 +10,12 @@
  *     History: <author>   <time>    <version >         <desc>
  *              soloapple   10/02/16                  build this moudle
  ***************************************************************************************/
-#include <mysql/mysql.h>
-#include <stdio.h>
-#include <string.h>
-#include <unistd.h>
-#include <signal.h>
-#include <stdlib.h>
-#include <pwd.h>
-#include <sys/types.h>
-#include <time.h>
-#include <pthread.h>
-#include <sys/time.h>
-#include <assert.h>
-#include <sys/types.h>
-#include <sys/stat.h>
-
-
-#include <iostream>
-#include <map>
-#include <string>
-#include <list>
-#include <fstream>
-#include <sstream>
-#include <ext/hash_map>
-
+#include "headers.h"
 
 using namespace std;
 using namespace __gnu_cxx;
 
-const char sql_login_conf[] = "sql_login.conf";
+const char sql_login_conf[] = "./login.conf";
 
 const char flag_sql_login_load[]	= "load";
 const char flag_sql_login_default[] = "default";

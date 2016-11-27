@@ -18,6 +18,13 @@ set_login_info(sql_login_info **p_sql_login_info, const char *login_flag)
 	(*p_sql_login_info)->login_port		= login_conf.GetValue(login_flag, flag_sql_login_port, flag_sql_login_default);
 	(*p_sql_login_info)->login_sock		= login_conf.GetValue(login_flag, flag_sql_login_sock, flag_sql_login_default);
 
+	printf("user:%s\n", (*p_sql_login_info)->login_user);
+	printf("pass:%s\n", (*p_sql_login_info)->login_password);
+	printf("host:%s\n", (*p_sql_login_info)->login_host);
+	printf("data:%s\n", (*p_sql_login_info)->login_database);
+	printf("port:%s\n", (*p_sql_login_info)->login_port);
+	printf("sock:%s\n", (*p_sql_login_info)->login_sock);
+
 	assert((*p_sql_login_info)->login_user != NULL);
 	assert((*p_sql_login_info)->login_password != NULL);
 	assert((*p_sql_login_info)->login_host != NULL);

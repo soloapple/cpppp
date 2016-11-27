@@ -2,6 +2,10 @@
 
 BASENAME= /usr/local
 
+GCH_P=.
+GCH_H=headers.h
+GCH=$(GCH_H).gch
+
 CFLAGS	=  -Wall -pipe -I/usr/local/include -DPATH=\"/storage/gard_file\" -g
 LDFLAGS =  -L. -L/lib64 -lmysqlclient -lpthread
 SRC = ConvertUTF.c readconf.cc
@@ -21,7 +25,10 @@ BINS=readconf
 .PHONY: $(BINS)
 all: $(BINS)
 
-readconf: 
+$(GCH):
+	g++ $(GCH_H)
+
+readconf: $(GCH_P)/$(GCH)
 	$(CC) $(SRC) $(CFLAGS) $(OBJS) -o $@ $(LDFLAGS) $(LIBS)
 
 install: $(BINS)
@@ -32,4 +39,4 @@ deinstall:
 	cd $(BINDIR) && $(RM) $(BINS)
 
 clean:
-	rm -f *.$(O) $(BINS) *core*
+	rm -f *.$(O) $(BINS) *core* *.gch

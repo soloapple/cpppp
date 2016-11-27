@@ -9,10 +9,19 @@ AddEntry	SimpleIni.h	/^CSimpleIniTempl<SI_CHAR,SI_STRLESS,SI_CONVERTER>::AddEntr
 BASENAME	Makefile	/^BASENAME= \/usr\/local$/;"	m
 BINDIR	Makefile	/^BINDIR=$(BASENAME)\/sbin$/;"	m
 BINPERM	Makefile	/^BINPERM=0555 -s$/;"	m
-BINS	Makefile	/^BINS=sqlsyslogd$/;"	m
+BINS	Makefile	/^BINS=readconf$/;"	m
 Boolean	ConvertUTF.h	/^typedef unsigned char	Boolean; \/* 0 or 1 *\/$/;"	t
 CC	Makefile	/^CC = g++$/;"	m
 CFLAGS	Makefile	/^CFLAGS	=  -Wall -pipe -I\/usr\/local\/include -DPATH=\\"\/storage\/gard_file\\" -g$/;"	m
+COLOR_PRINT_INCLUDE	color_print.h	14;"	d
+COL_BLUE	color_print.h	25;"	d
+COL_BULE	color_print.h	23;"	d
+COL_END	color_print.h	29;"	d
+COL_GREEN	color_print.h	27;"	d
+COL_PURPLE	color_print.h	24;"	d
+COL_RED	color_print.h	28;"	d
+COL_WHITE	color_print.h	22;"	d
+COL_YELLOW	color_print.h	26;"	d
 CSimpleIni	SimpleIni.h	3423;"	d
 CSimpleIni	SimpleIni.h	3427;"	d
 CSimpleIniA	SimpleIni.h	/^    SI_NoCase<char>,SI_ConvertA<char> >                 CSimpleIniA;$/;"	t
@@ -223,6 +232,9 @@ FindEntry	SimpleIni.h	/^    bool FindEntry($/;"	p	class:CSimpleIniTempl	access:p
 FindEntry	SimpleIni.h	/^CSimpleIniTempl<SI_CHAR,SI_STRLESS,SI_CONVERTER>::FindEntry($/;"	f	class:CSimpleIniTempl	signature:( SI_CHAR *& a_pData, const SI_CHAR *& a_pSection, const SI_CHAR *& a_pKey, const SI_CHAR *& a_pVal, const SI_CHAR *& a_pComment ) const
 FindFileComment	SimpleIni.h	/^    SI_Error FindFileComment($/;"	p	class:CSimpleIniTempl	access:private	signature:( SI_CHAR *& a_pData, bool a_bCopyStrings )
 FindFileComment	SimpleIni.h	/^CSimpleIniTempl<SI_CHAR,SI_STRLESS,SI_CONVERTER>::FindFileComment($/;"	f	class:CSimpleIniTempl	signature:( SI_CHAR *& a_pData, bool a_bCopyStrings )
+GCH	Makefile	/^GCH=$(GCH_H).gch$/;"	m
+GCH_H	Makefile	/^GCH_H=headers.h$/;"	m
+GCH_P	Makefile	/^GCH_P=.$/;"	m
 GetAllKeys	SimpleIni.h	/^    bool GetAllKeys($/;"	p	class:CSimpleIniTempl	access:public	signature:( const SI_CHAR * a_pSection, TNamesDepend & a_names ) const
 GetAllKeys	SimpleIni.h	/^CSimpleIniTempl<SI_CHAR,SI_STRLESS,SI_CONVERTER>::GetAllKeys($/;"	f	class:CSimpleIniTempl	signature:( const SI_CHAR * a_pSection, TNamesDepend & a_names ) const
 GetAllSections	SimpleIni.h	/^    void GetAllSections($/;"	p	class:CSimpleIniTempl	access:public	signature:( TNamesDepend & a_names ) const
@@ -242,6 +254,7 @@ GetSectionSize	SimpleIni.h	/^    int GetSectionSize($/;"	p	class:CSimpleIniTempl
 GetSectionSize	SimpleIni.h	/^CSimpleIniTempl<SI_CHAR,SI_STRLESS,SI_CONVERTER>::GetSectionSize($/;"	f	class:CSimpleIniTempl	signature:( const SI_CHAR * a_pSection ) const
 GetValue	SimpleIni.h	/^    const SI_CHAR * GetValue($/;"	p	class:CSimpleIniTempl	access:public	signature:( const SI_CHAR * a_pSection, const SI_CHAR * a_pKey, const SI_CHAR * a_pDefault = NULL, bool * a_pHasMultiple = NULL ) const
 GetValue	SimpleIni.h	/^CSimpleIniTempl<SI_CHAR,SI_STRLESS,SI_CONVERTER>::GetValue($/;"	f	class:CSimpleIniTempl	signature:( const SI_CHAR * a_pSection, const SI_CHAR * a_pKey, const SI_CHAR * a_pDefault, bool * a_pHasMultiple ) const
+HEADERS_INCLUDE	headers.h	14;"	d
 INCLUDED_SimpleIni_h	SimpleIni.h	196;"	d
 INSTALL	Makefile	/^INSTALL=install -o root -m$/;"	m
 IsComment	SimpleIni.h	/^    inline bool IsComment(SI_CHAR ch) const {$/;"	f	class:CSimpleIniTempl	access:private	signature:(SI_CHAR ch) const
@@ -259,6 +272,25 @@ IsSpace	SimpleIni.h	/^    inline bool IsSpace(SI_CHAR ch) const {$/;"	f	class:CS
 IsUnicode	SimpleIni.h	/^    bool IsUnicode() const { return m_bStoreIsUtf8; }$/;"	f	class:CSimpleIniTempl	access:public	signature:() const
 KeyOrder	SimpleIni.h	/^        struct KeyOrder : std::binary_function<Entry, Entry, bool> {$/;"	s	struct:CSimpleIniTempl::Entry	inherits:std::binary_function	access:public
 LDFLAGS	Makefile	/^LDFLAGS =  -L. -L\/lib64 -lmysqlclient -lpthread$/;"	m
+LOGD	color_print.h	74;"	d
+LOGD	color_print.h	86;"	d
+LOGDP	color_print.h	80;"	d
+LOGDP	color_print.h	87;"	d
+LOGE	color_print.h	127;"	d
+LOGE	color_print.h	140;"	d
+LOGEP	color_print.h	134;"	d
+LOGI	color_print.h	91;"	d
+LOGIP	color_print.h	97;"	d
+LOGN	color_print.h	56;"	d
+LOGN	color_print.h	69;"	d
+LOGNP	color_print.h	62;"	d
+LOGNP	color_print.h	70;"	d
+LOGW	color_print.h	103;"	d
+LOGW	color_print.h	110;"	d
+LOGW	color_print.h	122;"	d
+LOGWP	color_print.h	104;"	d
+LOGWP	color_print.h	116;"	d
+LOGWP	color_print.h	123;"	d
 LoadConfByEqual	ReadByStream.cc	/^LoadConfByEqual()$/;"	f	signature:()
 LoadData	SimpleIni.h	/^    SI_Error LoadData($/;"	p	class:CSimpleIniTempl	access:public	signature:( const char * a_pData, size_t a_uDataLen )
 LoadData	SimpleIni.h	/^    SI_Error LoadData($/;"	p	class:CSimpleIniTempl	access:public	signature:( std::istream & a_istream )
@@ -274,6 +306,22 @@ LoadFile	SimpleIni.h	/^CSimpleIniTempl<SI_CHAR,SI_STRLESS,SI_CONVERTER>::LoadFil
 LoadMultiLineText	SimpleIni.h	/^    bool LoadMultiLineText($/;"	p	class:CSimpleIniTempl	access:private	signature:( SI_CHAR *& a_pData, const SI_CHAR *& a_pVal, const SI_CHAR * a_pTagName, bool a_bAllowBlankLinesInComment = false ) const
 LoadMultiLineText	SimpleIni.h	/^CSimpleIniTempl<SI_CHAR,SI_STRLESS,SI_CONVERTER>::LoadMultiLineText($/;"	f	class:CSimpleIniTempl	signature:( SI_CHAR *& a_pData, const SI_CHAR *& a_pVal, const SI_CHAR * a_pTagName, bool a_bAllowBlankLinesInComment ) const
 LoadOrder	SimpleIni.h	/^        struct LoadOrder : std::binary_function<Entry, Entry, bool> {$/;"	s	struct:CSimpleIniTempl::Entry	inherits:std::binary_function	access:public
+MLEVEL	color_print.h	31;"	d
+MLOG_DEBUG	color_print.h	35;"	d
+MLOG_DEBUG	color_print.h	40;"	d
+MLOG_ERROR	color_print.h	38;"	d
+MLOG_ERROR	color_print.h	43;"	d
+MLOG_ERROR	color_print.h	47;"	d
+MLOG_ERROR	color_print.h	50;"	d
+MLOG_ERROR	color_print.h	52;"	d
+MLOG_INFO	color_print.h	34;"	d
+MLOG_NOTICE	color_print.h	36;"	d
+MLOG_NOTICE	color_print.h	41;"	d
+MLOG_NOTICE	color_print.h	45;"	d
+MLOG_WARNING	color_print.h	37;"	d
+MLOG_WARNING	color_print.h	42;"	d
+MLOG_WARNING	color_print.h	46;"	d
+MLOG_WARNING	color_print.h	49;"	d
 O	Makefile	/^O=o$/;"	m
 OutputMultiLineText	SimpleIni.h	/^    bool OutputMultiLineText($/;"	p	class:CSimpleIniTempl	access:private	signature:( OutputWriter & a_oOutput, Converter & a_oConverter, const SI_CHAR * a_pText ) const
 OutputMultiLineText	SimpleIni.h	/^CSimpleIniTempl<SI_CHAR,SI_STRLESS,SI_CONVERTER>::OutputMultiLineText($/;"	f	class:CSimpleIniTempl	signature:( OutputWriter & a_oOutput, Converter & a_oConverter, const SI_CHAR * a_pText ) const
@@ -359,7 +407,8 @@ SI_UPDATED	SimpleIni.h	/^    SI_UPDATED  =  1,   \/\/!< An existing value was up
 SI_UTF8_SIGNATURE	SimpleIni.h	248;"	d
 SI_WCHAR_T	SimpleIni.h	264;"	d
 SI_WCHAR_T	SimpleIni.h	267;"	d
-SRC	Makefile	/^SRC = ConvertUTF.c mempool.c sqlsyslogd.cc$/;"	m
+SRC	Makefile	/^SRC = ConvertUTF.c readconf.cc$/;"	m
+SYSTEM_INCLUDE	system.h	14;"	d
 Save	SimpleIni.h	/^    SI_Error Save($/;"	f	class:CSimpleIniTempl	access:public	signature:( std::ostream & a_ostream, bool a_bAddSignature = false ) const
 Save	SimpleIni.h	/^    SI_Error Save($/;"	f	class:CSimpleIniTempl	access:public	signature:( std::string & a_sBuffer, bool a_bAddSignature = false ) const
 Save	SimpleIni.h	/^    SI_Error Save($/;"	p	class:CSimpleIniTempl	access:public	signature:( OutputWriter & a_oOutput, bool a_bAddSignature = false ) const
@@ -413,43 +462,35 @@ Write	SimpleIni.h	/^        virtual void Write(const char * a_pBuf) = 0;$/;"	p	c
 Write	SimpleIni.h	/^        void Write(const char * a_pBuf) {$/;"	f	class:CSimpleIniTempl::FileWriter	access:public	signature:(const char * a_pBuf)
 Write	SimpleIni.h	/^        void Write(const char * a_pBuf) {$/;"	f	class:CSimpleIniTempl::StreamWriter	access:public	signature:(const char * a_pBuf)
 Write	SimpleIni.h	/^        void Write(const char * a_pBuf) {$/;"	f	class:CSimpleIniTempl::StringWriter	access:public	signature:(const char * a_pBuf)
-b_load_local	sqlsyslogd.cc	/^bool b_load_local = 0;$/;"	v
-b_load_remote	sqlsyslogd.cc	/^bool b_load_remote = 0;$/;"	v
+b_load	readconf.cc	/^int b_load = 0;$/;"	v
 conversionOK	ConvertUTF.h	/^	conversionOK, 		\/* conversion successful *\/$/;"	e	enum:__anon_ConvertUTF_h_102
-create_thread	sqlsyslogd.cc	/^create_thread(void*(*thread_func)(void*))$/;"	f	signature:(void*(*thread_func)(void*))
-deal_with_local_line	sqlsyslogd.cc	/^deal_with_local_line(char *line, MYSQL *db, int *pos_buff, int *sql_row_num, char *data_to_insert_mysql)$/;"	f	signature:(char *line, MYSQL *db, int *pos_buff, int *sql_row_num, char *data_to_insert_mysql)
-deal_with_remote_line	sqlsyslogd.cc	/^deal_with_remote_line(char *line, MYSQL *remote_db, int *pos_buff, int *sql_row_num, char *data_to_insert_mysql)$/;"	f	signature:(char *line, MYSQL *remote_db, int *pos_buff, int *sql_row_num, char *data_to_insert_mysql)
-democonf	ReadByStream.cc	/^const char democonf[] = "demo.conf";$/;"	v
-err_log_file	sqlsyslogd.cc	/^const char *err_log_file = PATH;$/;"	v
-err_log_get_list	sqlsyslogd.cc	/^err_log_get_list(void *args)$/;"	f	signature:(void *args)
-err_log_put_list	sqlsyslogd.cc	/^err_log_put_list(const char *log)$/;"	f	signature:(const char *log)
+democonf	ReadByStream.cc	/^const char democonf[] = "ReadByStream.conf";$/;"	v
 false	ConvertUTF.c	56;"	d	file:
 firstByteMark	ConvertUTF.c	/^static const UTF8 firstByteMark[7] = { 0x00, 0x00, 0xC0, 0xE0, 0xF0, 0xF8, 0xFC };$/;"	v	file:
-g_mode_table_map	sqlsyslogd.cc	/^hash_map<int, char*>g_mode_table_map; $/;"	v
-g_mp_err_log	sqlsyslogd.cc	/^struct mem_pool *g_mp_err_log;$/;"	v	typeref:struct:mem_pool
-g_mp_local	sqlsyslogd.cc	/^struct mem_pool *g_mp_local;$/;"	v	typeref:struct:mem_pool
-g_mp_remote	sqlsyslogd.cc	/^struct mem_pool *g_mp_remote;$/;"	v	typeref:struct:mem_pool
-g_remote_fac_list	sqlsyslogd.cc	/^list<const char*>g_remote_fac_list;$/;"	v
-g_total	sqlsyslogd.cc	/^int g_total;$/;"	v
-get_table_name_from_mode	sqlsyslogd.cc	/^get_table_name_from_mode(char *mode_name)$/;"	f	signature:(char *mode_name)
+flag_sql_login_database	readconf.h	/^const char flag_sql_login_database[] = "database";$/;"	v
+flag_sql_login_default	readconf.h	/^const char flag_sql_login_default[] = "default";$/;"	v
+flag_sql_login_host	readconf.h	/^const char flag_sql_login_host[] = "host";$/;"	v
+flag_sql_login_load	readconf.h	/^const char flag_sql_login_load[]	= "load";$/;"	v
+flag_sql_login_password	readconf.h	/^const char flag_sql_login_password[] = "password";$/;"	v
+flag_sql_login_port	readconf.h	/^const char flag_sql_login_port[] = "port";$/;"	v
+flag_sql_login_sock	readconf.h	/^const char flag_sql_login_sock[] = "sock";$/;"	v
+flag_sql_login_user	readconf.h	/^const char flag_sql_login_user[] = "user";$/;"	v
 halfBase	ConvertUTF.c	/^static const UTF32 halfBase = 0x0010000UL;$/;"	v	file:
 halfMask	ConvertUTF.c	/^static const UTF32 halfMask = 0x3FFUL;$/;"	v	file:
 halfShift	ConvertUTF.c	/^static const int halfShift  = 10; \/* used for shifting by 10 bits *\/$/;"	v	file:
-handle	sqlsyslogd.cc	/^handle(int signal)$/;"	f	signature:(int signal)
-init_err_log_thread	sqlsyslogd.cc	/^init_err_log_thread()$/;"	f	signature:()
-init_mempool	sqlsyslogd.cc	/^init_mempool()$/;"	f	signature:()
-init_sql_conn	sqlsyslogd.cc	/^init_sql_conn(MYSQL *db, sql_login_info *p_sql_login_info)$/;"	f	signature:(MYSQL *db, sql_login_info *p_sql_login_info)
-insert_mysql_data	sqlsyslogd.cc	/^insert_mysql_data(MYSQL *db, char *query_info, int *pos_buff)$/;"	f	signature:(MYSQL *db, char *query_info, int *pos_buff)
 isLegalUTF8	ConvertUTF.c	/^static Boolean isLegalUTF8(const UTF8 *source, int length) {$/;"	f	file:	signature:(const UTF8 *source, int length)
 isLegalUTF8Sequence	ConvertUTF.c	/^Boolean isLegalUTF8Sequence(const UTF8 *source, const UTF8 *sourceEnd) {$/;"	f	signature:(const UTF8 *source, const UTF8 *sourceEnd)
 isLegalUTF8Sequence	ConvertUTF.h	/^Boolean isLegalUTF8Sequence(const UTF8 *source, const UTF8 *sourceEnd);$/;"	p	signature:(const UTF8 *source, const UTF8 *sourceEnd)
 lenientConversion	ConvertUTF.h	/^	lenientConversion$/;"	e	enum:__anon_ConvertUTF_h_109
-load_fac_conf	sqlsyslogd.cc	/^load_fac_conf()$/;"	f	signature:()
-load_login_conf	sqlsyslogd.cc	/^load_login_conf()$/;"	f	signature:()
-load_table_conf	sqlsyslogd.cc	/^load_table_conf()$/;"	f	signature:()
-local_db	sqlsyslogd.cc	/^MYSQL local_db;$/;"	v
+load_login_conf	readconf.cc	/^load_login_conf()$/;"	f	signature:()
 locase	SimpleIni.h	/^    inline SI_CHAR locase(SI_CHAR ch) const {$/;"	f	struct:SI_GenericNoCase	access:public	signature:(SI_CHAR ch) const
-login_conf	sqlsyslogd.cc	/^CSimpleIniA login_conf;$/;"	v
+login_conf	readconf.cc	/^CSimpleIniA login_conf;$/;"	v
+login_database	readconf.h	/^	const char *login_database;$/;"	m	struct:sql_login_info	access:public
+login_host	readconf.h	/^	const char *login_host;$/;"	m	struct:sql_login_info	access:public
+login_password	readconf.h	/^	const char *login_password;$/;"	m	struct:sql_login_info	access:public
+login_port	readconf.h	/^	const char *login_port;$/;"	m	struct:sql_login_info	access:public
+login_sock	readconf.h	/^	const char *login_sock;$/;"	m	struct:sql_login_info	access:public
+login_user	readconf.h	/^	const char *login_user;	$/;"	m	struct:sql_login_info	access:public
 m_bAllowMultiKey	SimpleIni.h	/^    bool m_bAllowMultiKey;$/;"	m	class:CSimpleIniTempl	access:private
 m_bAllowMultiLine	SimpleIni.h	/^    bool m_bAllowMultiLine;$/;"	m	class:CSimpleIniTempl	access:private
 m_bSpaces	SimpleIni.h	/^    bool m_bSpaces;$/;"	m	class:CSimpleIniTempl	access:private
@@ -470,8 +511,7 @@ m_strings	SimpleIni.h	/^    TNamesDepend m_strings;$/;"	m	class:CSimpleIniTempl	
 m_uCodePage	SimpleIni.h	/^    UINT m_uCodePage;$/;"	m	class:SI_ConvertW	access:private
 m_uDataLen	SimpleIni.h	/^    size_t m_uDataLen;$/;"	m	class:CSimpleIniTempl	access:private
 main	ReadByStream.cc	/^main ( int argc, char *argv[] )$/;"	f	signature:( int argc, char *argv[] )
-main	sqlsyslogd.cc	/^main(int argc, char* argv)$/;"	f	signature:(int argc, char* argv)
-monitor_file_size	sqlsyslogd.cc	/^monitor_file_size(const char *log_file_path)$/;"	f	signature:(const char *log_file_path)
+main	readconf.cc	/^main(int argc, char* argv)$/;"	f	signature:(int argc, char* argv)
 nOrder	SimpleIni.h	/^        int             nOrder;$/;"	m	struct:CSimpleIniTempl::Entry	access:public
 offsetsFromUTF8	ConvertUTF.c	/^static const UTF32 offsetsFromUTF8[6] = { 0x00000000UL, 0x00003080UL, 0x000E2080UL, $/;"	v	file:
 operator ()	SimpleIni.h	/^            bool operator()(const Entry & lhs, const Entry & rhs) const {$/;"	f	struct:CSimpleIniTempl::Entry::KeyOrder	access:public	signature:(const Entry & lhs, const Entry & rhs) const
@@ -492,22 +532,23 @@ operator =	SimpleIni.h	/^    SI_ConvertW & operator=(const SI_ConvertW & rhs) {$
 operator >	SimpleIni.h	/^        bool operator>(const Entry & rhs) const { return LoadOrder()(rhs, *this); }$/;"	f	struct:CSimpleIniTempl::Entry	access:public	signature:(const Entry & rhs) const
 pComment	SimpleIni.h	/^        const SI_CHAR * pComment;$/;"	m	struct:CSimpleIniTempl::Entry	access:public
 pItem	SimpleIni.h	/^        const SI_CHAR * pItem;$/;"	m	struct:CSimpleIniTempl::Entry	access:public
-p_local_info	sqlsyslogd.cc	/^sql_login_info *p_local_info;$/;"	v
-p_remote_info	sqlsyslogd.cc	/^sql_login_info *p_remote_info;$/;"	v
-parse_fac_line	sqlsyslogd.cc	/^parse_fac_line(string line)$/;"	f	signature:(string line)
+p_login_info	readconf.cc	/^sql_login_info *p_login_info;$/;"	v
 parse_line	ReadByStream.cc	/^parse_line(string line)$/;"	f	signature:(string line)
-parse_table_line	sqlsyslogd.cc	/^parse_table_line(string line)$/;"	f	signature:(string line)
-push_data_mysql_local	sqlsyslogd.cc	/^push_data_mysql_local(void *arg)$/;"	f	signature:(void *arg)
-push_data_mysql_remote	sqlsyslogd.cc	/^push_data_mysql_remote(void *arg)$/;"	f	signature:(void *arg)
-remote_db	sqlsyslogd.cc	/^MYSQL remote_db;$/;"	v
-set_login_info	sqlsyslogd.cc	/^set_login_info(sql_login_info **p_sql_login_info, const char *login_flag)$/;"	f	signature:(sql_login_info **p_sql_login_info, const char *login_flag)
+set_login_info	readconf.cc	/^set_login_info(sql_login_info **p_sql_login_info, const char *login_flag)$/;"	f	signature:(sql_login_info **p_sql_login_info, const char *login_flag)
 sourceExhausted	ConvertUTF.h	/^	sourceExhausted,	\/* partial character in source, but hit end *\/$/;"	e	enum:__anon_ConvertUTF_h_102
 sourceIllegal	ConvertUTF.h	/^	sourceIllegal		\/* source sequence is illegal\/malformed *\/$/;"	e	enum:__anon_ConvertUTF_h_102
+sql_login_conf	readconf.h	/^const char sql_login_conf[] = "sql_login.conf";$/;"	v
+sql_login_info	readconf.h	/^struct sql_login_info$/;"	s
+sql_login_info::login_database	readconf.h	/^	const char *login_database;$/;"	m	struct:sql_login_info	access:public
+sql_login_info::login_host	readconf.h	/^	const char *login_host;$/;"	m	struct:sql_login_info	access:public
+sql_login_info::login_password	readconf.h	/^	const char *login_password;$/;"	m	struct:sql_login_info	access:public
+sql_login_info::login_port	readconf.h	/^	const char *login_port;$/;"	m	struct:sql_login_info	access:public
+sql_login_info::login_sock	readconf.h	/^	const char *login_sock;$/;"	m	struct:sql_login_info	access:public
+sql_login_info::login_user	readconf.h	/^	const char *login_user;	$/;"	m	struct:sql_login_info	access:public
 strictConversion	ConvertUTF.h	/^	strictConversion = 0,$/;"	e	enum:__anon_ConvertUTF_h_109
 targetExhausted	ConvertUTF.h	/^	targetExhausted,	\/* insuff. room in target for conversion *\/$/;"	e	enum:__anon_ConvertUTF_h_102
 trailingBytesForUTF8	ConvertUTF.c	/^static const char trailingBytesForUTF8[256] = {$/;"	v	file:
 true	ConvertUTF.c	57;"	d	file:
-write_err_log_to_file	sqlsyslogd.cc	/^write_err_log_to_file(char *log)$/;"	f	signature:(char *log)
 ~CSimpleIniTempl	SimpleIni.h	/^    ~CSimpleIniTempl();$/;"	p	class:CSimpleIniTempl	access:public	signature:()
 ~CSimpleIniTempl	SimpleIni.h	/^CSimpleIniTempl<SI_CHAR,SI_STRLESS,SI_CONVERTER>::~CSimpleIniTempl()$/;"	f	class:CSimpleIniTempl	signature:()
 ~OutputWriter	SimpleIni.h	/^        virtual ~OutputWriter() { }$/;"	f	class:CSimpleIniTempl::OutputWriter	access:public	signature:()
