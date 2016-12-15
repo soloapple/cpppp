@@ -50,14 +50,13 @@ runFunc(pFunParam)
 	return;
 }
 
-
 /* 
  * one_variant 2
  * prototype: double(*)() (*e)[9] 
  */
 
-
-int main()
+int 
+main()
 {
 
 	/* 
