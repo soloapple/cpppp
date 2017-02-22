@@ -12,6 +12,7 @@ LIBS = ConvertUTF.c
 
 SRC_R = read_conf.cc
 SRC_G = get_conf.cc
+SRC_S = read_by_stream.cc
 
 O=o
 CC = g++
@@ -21,7 +22,7 @@ BINDIR=$(BASENAME)/sbin
 INSTALL=install -o root -m
 BINPERM=0555 -s
 
-BINS = read_conf get_conf
+BINS = read_conf get_conf read_by_stream
 
 .PHONY: $(BINS)
 all: $(BINS)
@@ -30,14 +31,13 @@ $(GCH):
 	$(CC) $(GCH_H)
 
 ############################################################
-#    
-# 
-#
-#
+# Line Style(one kind)   
+# [flag]	 
+#	key=value
+#	key = value
 ############################################################
 read_conf: $(GCH_P)/$(GCH)
 	$(CC) $(SRC_R) $(CFLAGS) -o $@ $(LDFLAGS) $(LIBS)
-
 
 ############################################################
 # Line Style(two kinds):
@@ -47,6 +47,12 @@ read_conf: $(GCH_P)/$(GCH)
 get_conf: $(GCH_P)/$(GCH)
 	$(CC) $(SRC_G) $(CFLAGS) -o $@ $(LDFLAGS) $(LIBS)
 
+############################################################
+# Line Style(two kinds):
+#	key = value1, value2, value3
+############################################################
+read_by_stream: $(GCH_P)/$(GCH)
+	$(CC) $(SRC_S) $(CFLAGS) -o $@ $(LDFLAGS) $(LIBS)
 
 install: $(BINS)
 	$(INSTALL) $(BINPERM) $(BINS) $(BINDIR)

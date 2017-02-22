@@ -91,14 +91,20 @@ analyse_line(const string & line, string & key, string & value)
 
 	/* cut comments from middle of the line */
     string new_line = line.substr(start_pos, start_pos + 1 - end_pos);
+
+	cout << "new line:" << new_line << endl;
   
 	/* no '=' in line */
-    if ((pos = new_line.find('=')) == -1)  
+    if ( (pos = new_line.find('=')) == -1 )  
+	{
+		cout << "has not find =" << endl;
         return false; 
+	}
   
 	/* get key, value, and trim it. */
     key = new_line.substr(0, pos);  
-    value = new_line.substr(pos + 1, end_pos + 1- (pos + 1));  
+    value = new_line.substr(pos + 1, end_pos + 1 - (pos + 1));  
+
   
     trim(key);  
     if ( key.empty() ) 
@@ -107,6 +113,9 @@ analyse_line(const string & line, string & key, string & value)
     }  
 
     trim(value);  
+
+	cout << key << ":" << value << endl;
+
     return true;  
 }  
   
@@ -158,7 +167,7 @@ main(int argc, char **argv)
 //    string m_sPath = "./LandClient.conf";  
     map<string,string> m_mapConfig;  
     read_config(m_sPath,m_mapConfig);  
-    print_config(m_mapConfig);  
+//    print_config(m_mapConfig);  
     return 0;  
 }  
 

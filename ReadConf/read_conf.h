@@ -15,7 +15,7 @@
 using namespace std;
 using namespace __gnu_cxx;
 
-const char sql_login_conf[] = "./login.conf";
+const char sql_login_conf[] = "read_conf.conf";
 
 const char flag_sql_login_load[]	= "load";
 const char flag_sql_login_default[] = "default";
