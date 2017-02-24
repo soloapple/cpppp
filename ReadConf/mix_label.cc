@@ -259,6 +259,13 @@ load_config()
 	
 	while ( getline(in, line) )
 	{
+		trim(line);
+		if ( line.length() == 0 )
+			continue;
+
+		pos.start = 0;
+		pos.end = line.length(); 
+
 		if ( (pos.n = line.find('#')) != -1 )	
 		{
 			if ( pos.n == 0 )
@@ -271,10 +278,7 @@ load_config()
 		}
 
 		string new_line = line.substr(pos.start, pos.start + 1 - pos.end);
-
 		trim(new_line);
-		if (new_line.length() == 0)
-			continue;
 
 		if ( line.find('[') != line.npos )
 		{
@@ -309,6 +313,7 @@ int
 main()
 {
 	load_config();
+
 	conf_mail_display();
 	conf_log_display();
 	conf_snmp_display();
